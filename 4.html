@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary convertion</title>
+</head>
+<body>
+    <h1 id="info"></h1>
+    <script>
+        var  baseSalary = parseInt(prompt("Enter base salary:"));
+        var  hra = parseInt(prompt("Enter HRA percentage:"));
+        var  da = parseInt(prompt("Enter DA percentage:"));
+        var  ta = parseInt(prompt("Enter TA percentage:"));
+        var  hraAmount = baseSalary * (hra / 100);
+        var  daAmount = baseSalary * (da / 100);
+        var  taAmount = baseSalary * (ta / 100);
+        var  grossSalary = Number(baseSalary) + hraAmount + daAmount + taAmount;
+        if(isNaN(baseSalary) || isNaN(hra) || isNaN(da) || isNaN(ta))
+        {
+            document.getElementById('info').innerHTML = "PLEASE ENTER VALID NUMBER.";
+            document.getElementById('info').style.color = 'red';
+        }
+        else
+        {
+            document.getElementById('info').innerHTML = "Gross salary: " + grossSalary;
+            document.getElementById('info').style.color = 'Green';
+        }
+    </script>
+</body>
+</html>

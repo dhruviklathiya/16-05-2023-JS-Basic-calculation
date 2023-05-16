@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcuis to Fahrenheit</title>
+</head>
+<body>
+    <h1 id="info"></h1>
+    <script>
+        var aa = parseFloat(prompt("Enter temperature in Celsius:"));
+        var bb = (aa*1.8) + 32;
+        if(isNaN(aa) || isNaN(bb))
+        {
+            document.getElementById('info').innerHTML = "PLEASE ENTER VALID NUMBER.";
+            document.getElementById('info').style.color = 'red';
+        }
+        else{
+        document.getElementById('info').innerHTML = "Temperature in Celsius is: "+aa+" <br> Temperature in Fahrenheit is: " + bb;
+        document.getElementById('info').style.color = "Green";
+        }
+    </script>
+</body>
+</html>

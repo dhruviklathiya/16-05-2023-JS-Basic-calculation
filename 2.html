@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable swapping</title>
+</head>
+<body>
+    <h1 id="info"></h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <script>
+        var aa = parseFloat(prompt("Enter first value:"));
+        var bb = parseFloat(prompt("Enter second value:"));
+        if(isNaN(aa) || isNaN(bb))
+        {
+            document.getElementById('info').innerHTML = "PLEASE ENTER VALID NUMBER.";
+            document.getElementById('info').style.color = 'red';
+        }
+        else
+        {
+            document.getElementById('p1').innerHTML = "First value before swap is: " + aa;
+            document.getElementById('p2').innerHTML = "Second value before swap is: " + bb;
+            // LOGIC:
+            // Take 3 container   Aa[]  Bb[]  Cc[] 
+            //                    Aa[100]  Bb[400]  Cc[] 
+            //                    Aa[]  Bb[400]  Cc[100] Value of a tranfering into Cc and assuming Aa is empty actual value are Aa[100]  Bb[400]  Cc[100]
+            //                    Aa[400]  Bb[400]  Cc[100] changing value of Aa[100] to Bb[400] assuming Bb is empty provide value of Cc to Bb
+            //                    Aa[400]  Bb[100]  Cc[100]  
+            var cc;
+            cc = aa;
+            aa = bb;
+            bb = cc;
+            document.getElementById('p3').innerHTML = "First value after swap is: " + aa;
+            document.getElementById('p4').innerHTML = "Second value after swap is: " + bb;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of triangle</title>
+</head>
+<body>
+    <h1 id="info"></h1>
+    <script>    
+        var base = parseInt(prompt("Enter base of triangle:"));
+        var height = parseInt(prompt("Enter height of triangle:"));
+        var area = 0.5 * base * height;
+        if(isNaN(base) || isNaN(height))
+        {
+            document.getElementById('info').innerHTML = "PLEASE ENTER VALID NUMBER.";
+            document.getElementById('info').style.color = 'red';
+        }
+        else
+        {
+            document.getElementById('info').innerHTML = "Area of triangle is: " + area;
+            document.getElementById('info').style.color = "Green";
+        }
+    </script>
+</body>
+</html>

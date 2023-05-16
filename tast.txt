@@ -1,0 +1,14 @@
+1. Write a javascript Program to two variable addition, subtraction, multiplication, division .(compulsory user input)
+2. Write a javascript Program to perform a swapping of two variables.(compulsory user input)
+3. Write a javascript program to convert temperature from degree Celsius to Fahrenheit.(compulsory user input)
+4. Write a javascript Program to find gross salary.(compulsory user input)
+Ex. Base Salary: 100 RS, HRA=10%, DA=5%, TA=8%.
+Ans = 123 RS.(compulsory user input)
+
+5. Write a javascript Program to find circle area.(compulsory user input)(formula  3.14 * r * r)
+
+
+6. Write a javascript Program to find triangle area.(compulsory user input)(formula  0.5 * b * h)
+
+
+7. Write a javascript Program to find  rate of interest.(compulsory user input)(p * r  * n / 100)
